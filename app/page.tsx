@@ -2,47 +2,48 @@ export default function Home() {
   return (
     <main className="bg-[#0B0D0F] text-white">
 
-      {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+      {/* HERO */}
 
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1F6B4F]/20 via-transparent to-[#C6A15B]/10" />
+      <section className="min-h-screen flex items-center px-8 md:px-20 relative">
 
-        <div className="absolute inset-0 bg-[#0B0D0F]/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0D0F] via-[#0B0D0F]/90 to-transparent" />
 
 
-        <div className="relative z-10 max-w-5xl text-center">
+        <div className="relative z-10 max-w-4xl pt-20">
+
 
           <p className="text-[#C6A15B] uppercase tracking-[0.5em] text-sm mb-8">
             Zürich · Switzerland
           </p>
 
 
-          <h1 className="text-5xl md:text-7xl font-semibold leading-tight mb-8">
-            Strategic Investments.
+          <h1 className="text-5xl md:text-7xl font-light leading-tight mb-10">
+            Strategic Capital.
             <br />
-            Long-Term Partnerships.
+            Exceptional Opportunities.
             <br />
-            Sustainable Growth.
+            Long-Term Value Creation.
           </h1>
 
 
-          <p className="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed mb-12">
+          <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-12">
             Bonsai Investments is a Zürich-based investment advisory firm
-            focused on identifying exceptional opportunities and supporting
-            companies through strategic capital and expertise.
+            dedicated to identifying exceptional opportunities and supporting
+            ambitious companies through strategic capital, expertise and
+            long-term partnerships.
           </p>
 
 
-          <div className="flex flex-col sm:flex-row justify-center gap-5">
 
-            <button className="bg-[#C6A15B] text-black px-10 py-4 rounded-full font-medium hover:scale-105 transition">
+          <div className="flex gap-5">
+
+            <button className="bg-[#C6A15B] text-black px-8 py-4 rounded-full">
               Discover Our Approach
             </button>
 
 
-            <button className="border border-white/20 px-10 py-4 rounded-full hover:bg-white/10 transition">
-              Contact Our Team
+            <button className="border border-white/20 px-8 py-4 rounded-full hover:bg-white/10 transition">
+              Contact Us
             </button>
 
           </div>
@@ -50,83 +51,118 @@ export default function Home() {
 
         </div>
 
+
       </section>
 
 
 
-      {/* ABOUT SECTION */}
-      <section className="py-32 px-6 bg-[#111417]">
+      {/* WHO WE ARE */}
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+
+      <section className="py-32 px-8 md:px-20 bg-[#111417]">
+
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+
 
           <div>
 
-            <p className="text-[#C6A15B] uppercase tracking-[0.3em] text-sm mb-6">
-              About Us
+            <p className="text-[#C6A15B] uppercase tracking-[0.4em] text-sm mb-6">
+              Who We Are
             </p>
 
 
-            <h2 className="text-4xl md:text-5xl font-semibold">
+            <h2 className="text-4xl md:text-5xl font-light">
               Building value beyond capital.
             </h2>
+
 
           </div>
 
 
-          <div>
 
-            <p className="text-gray-400 text-lg leading-relaxed">
-              We partner with entrepreneurs, companies and investors
-              by combining strategic expertise, capital solutions and
-              long-term relationships.
+          <div className="text-gray-400 text-lg leading-relaxed">
+
+
+            <p className="mb-6">
+              At Bonsai Investments, we believe that sustainable value is
+              created through strong relationships, disciplined analysis and
+              a long-term vision.
             </p>
+
+
+            <p>
+              We partner with entrepreneurs, investors and organizations
+              seeking strategic opportunities and meaningful growth.
+            </p>
+
 
           </div>
 
 
         </div>
 
+
       </section>
 
 
 
-      {/* INVESTMENT FOCUS */}
-      <section className="py-32 px-6">
+
+      {/* EXPERTISE */}
+
+
+      <section className="py-32 px-8 md:px-20">
+
 
         <div className="max-w-6xl mx-auto">
 
 
-          <p className="text-[#C6A15B] uppercase tracking-[0.3em] text-sm text-center mb-6">
-            Investment Focus
+          <p className="text-[#C6A15B] uppercase tracking-[0.4em] text-sm mb-6 text-center">
+            Our Expertise
           </p>
 
 
-          <h2 className="text-4xl text-center font-semibold mb-16">
-            Areas of expertise
+          <h2 className="text-4xl text-center font-light mb-20">
+            Investment solutions built for growth
           </h2>
 
 
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
 
 
             {[
-              "Technology",
-              "Healthcare",
-              "Energy & Infrastructure",
-              "Financial Services",
-              "Real Estate",
-              "Growth Companies",
-            ].map((item) => (
+              {
+                title: "Investment Advisory",
+                text: "Strategic guidance and investment solutions designed to support companies and investors."
+              },
+              {
+                title: "Venture Capital",
+                text: "Identifying innovative companies with strong potential and supporting their development."
+              },
+              {
+                title: "Private Investments",
+                text: "Accessing carefully selected opportunities focused on sustainable growth."
+              },
+              {
+                title: "Strategic Partnerships",
+                text: "Connecting businesses, investors and expertise to create meaningful opportunities."
+              }
+            ].map((service) => (
 
               <div
-                key={item}
-                className="bg-[#15191D] border border-white/10 rounded-3xl p-10 hover:border-[#C6A15B]/50 transition"
+                key={service.title}
+                className="bg-[#15191D] p-10 rounded-2xl border border-white/10"
               >
 
-                <h3 className="text-xl font-medium">
-                  {item}
+                <h3 className="text-2xl mb-5">
+                  {service.title}
                 </h3>
+
+
+                <p className="text-gray-400 leading-relaxed">
+                  {service.text}
+                </p>
 
 
               </div>
@@ -139,38 +175,36 @@ export default function Home() {
 
         </div>
 
+
       </section>
 
 
 
 
-      {/* FINAL SECTION */}
-
-      <section className="py-32 px-6 bg-[#111417]">
+      {/* FINAL CTA */}
 
 
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-32 px-8 bg-[#111417] text-center">
 
 
-          <h2 className="text-4xl md:text-5xl font-semibold mb-8">
-            Partner with Bonsai Investments
-          </h2>
+        <h2 className="text-4xl md:text-5xl font-light mb-8">
+          Partner with Bonsai Investments
+        </h2>
 
 
-          <p className="text-gray-400 text-lg mb-10">
-            Connecting capital, expertise and exceptional opportunities.
-          </p>
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
+          Connecting capital, expertise and exceptional opportunities
+          through strategic partnerships.
+        </p>
 
 
-          <button className="bg-[#C6A15B] text-black px-10 py-4 rounded-full font-medium">
-            Contact Our Team
-          </button>
-
-
-        </div>
+        <button className="bg-[#C6A15B] text-black px-10 py-4 rounded-full">
+          Contact Our Team
+        </button>
 
 
       </section>
+
 
 
     </main>
