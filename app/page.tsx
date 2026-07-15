@@ -1,50 +1,73 @@
 export default function Home() {
   return (
-    <main className="bg-[#0B0D0F] text-white">
+    <main className="bg-[#080909] text-white">
+
 
       {/* HERO */}
 
-      <section className="min-h-screen flex items-center px-8 md:px-20 relative">
+      <section
+        className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
+      >
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0D0F] via-[#0B0D0F]/90 to-transparent" />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/images/hero.jpg')",
+          }}
+        />
 
 
-        <div className="relative z-10 max-w-4xl pt-20">
+        <div className="absolute inset-0 bg-black/70" />
 
 
-          <p className="text-[#C6A15B] uppercase tracking-[0.5em] text-sm mb-8">
+        <div className="relative z-10 text-center max-w-5xl pt-20">
+
+
+          <p className="text-[#C6A15B] tracking-[0.6em] uppercase text-sm mb-10">
             Zürich · Switzerland
           </p>
 
 
           <h1 className="text-5xl md:text-7xl font-light leading-tight mb-10">
+
             Strategic Capital.
             <br />
+
             Exceptional Opportunities.
             <br />
+
             Long-Term Value Creation.
+
           </h1>
 
 
-          <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-12">
+          <p className="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed mb-12">
+
             Bonsai Investments is a Zürich-based investment advisory firm
-            dedicated to identifying exceptional opportunities and supporting
-            ambitious companies through strategic capital, expertise and
-            long-term partnerships.
+            focused on identifying exceptional opportunities and building
+            long-term partnerships with ambitious companies and investors.
+
           </p>
 
 
 
-          <div className="flex gap-5">
+          <div className="flex justify-center gap-6 flex-col sm:flex-row">
 
-            <button className="bg-[#C6A15B] text-black px-8 py-4 rounded-full">
+
+            <button
+              className="bg-[#C6A15B] text-black px-10 py-4 rounded-full text-sm tracking-wide"
+            >
               Discover Our Approach
             </button>
 
 
-            <button className="border border-white/20 px-8 py-4 rounded-full hover:bg-white/10 transition">
+
+            <button
+              className="border border-white/30 px-10 py-4 rounded-full text-sm hover:bg-white/10 transition"
+            >
               Contact Us
             </button>
+
 
           </div>
 
@@ -56,24 +79,70 @@ export default function Home() {
 
 
 
-      {/* WHO WE ARE */}
 
 
-      <section className="py-32 px-8 md:px-20 bg-[#111417]">
+      {/* PHILOSOPHY */}
 
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+      <section className="py-40 px-6">
 
 
-          <div>
+        <div className="max-w-5xl mx-auto text-center">
 
-            <p className="text-[#C6A15B] uppercase tracking-[0.4em] text-sm mb-6">
-              Who We Are
+
+          <p className="text-[#C6A15B] tracking-[0.5em] uppercase text-sm mb-10">
+            Our Philosophy
+          </p>
+
+
+
+          <h2 className="text-4xl md:text-6xl font-light leading-tight mb-12">
+
+            Building lasting value through
+            <br />
+            strategic partnerships.
+
+          </h2>
+
+
+
+          <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+
+            We believe successful investments are built on trust,
+            discipline and a deep understanding of the companies and
+            markets we support.
+
+          </p>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+      {/* APPROACH */}
+
+
+      <section className="py-40 px-6 bg-[#101214]">
+
+
+        <div className="max-w-6xl mx-auto">
+
+
+          <div className="text-center mb-24">
+
+
+            <p className="text-[#C6A15B] tracking-[0.5em] uppercase text-sm mb-8">
+              Our Approach
             </p>
 
 
             <h2 className="text-4xl md:text-5xl font-light">
-              Building value beyond capital.
+              A disciplined investment process
             </h2>
 
 
@@ -81,91 +150,53 @@ export default function Home() {
 
 
 
-          <div className="text-gray-400 text-lg leading-relaxed">
 
-
-            <p className="mb-6">
-              At Bonsai Investments, we believe that sustainable value is
-              created through strong relationships, disciplined analysis and
-              a long-term vision.
-            </p>
-
-
-            <p>
-              We partner with entrepreneurs, investors and organizations
-              seeking strategic opportunities and meaningful growth.
-            </p>
-
-
-          </div>
-
-
-        </div>
-
-
-      </section>
-
-
-
-
-      {/* EXPERTISE */}
-
-
-      <section className="py-32 px-8 md:px-20">
-
-
-        <div className="max-w-6xl mx-auto">
-
-
-          <p className="text-[#C6A15B] uppercase tracking-[0.4em] text-sm mb-6 text-center">
-            Our Expertise
-          </p>
-
-
-          <h2 className="text-4xl text-center font-light mb-20">
-            Investment solutions built for growth
-          </h2>
-
-
-
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-4 gap-12">
 
 
             {[
               {
-                title: "Investment Advisory",
-                text: "Strategic guidance and investment solutions designed to support companies and investors."
+                number:"01",
+                title:"Identify",
+                text:"Selecting exceptional opportunities through market analysis."
               },
               {
-                title: "Venture Capital",
-                text: "Identifying innovative companies with strong potential and supporting their development."
+                number:"02",
+                title:"Evaluate",
+                text:"Assessing potential, risks and long-term perspectives."
               },
               {
-                title: "Private Investments",
-                text: "Accessing carefully selected opportunities focused on sustainable growth."
+                number:"03",
+                title:"Partner",
+                text:"Working alongside entrepreneurs and stakeholders."
               },
               {
-                title: "Strategic Partnerships",
-                text: "Connecting businesses, investors and expertise to create meaningful opportunities."
+                number:"04",
+                title:"Create Value",
+                text:"Building sustainable growth and lasting impact."
               }
-            ].map((service) => (
+            ].map((item)=>(
 
-              <div
-                key={service.title}
-                className="bg-[#15191D] p-10 rounded-2xl border border-white/10"
-              >
 
-                <h3 className="text-2xl mb-5">
-                  {service.title}
+              <div key={item.number}>
+
+                <p className="text-[#C6A15B] text-sm mb-6">
+                  {item.number}
+                </p>
+
+
+                <h3 className="text-2xl mb-5 font-light">
+                  {item.title}
                 </h3>
 
 
-                <p className="text-gray-400 leading-relaxed">
-                  {service.text}
+                <p className="text-gray-400 leading-relaxed text-sm">
+                  {item.text}
                 </p>
 
 
               </div>
+
 
             ))}
 
@@ -181,26 +212,104 @@ export default function Home() {
 
 
 
-      {/* FINAL CTA */}
 
 
-      <section className="py-32 px-8 bg-[#111417] text-center">
+      {/* EXPERTISE */}
 
 
-        <h2 className="text-4xl md:text-5xl font-light mb-8">
+      <section className="py-40 px-6">
+
+
+        <div className="max-w-6xl mx-auto">
+
+
+          <div className="text-center mb-20">
+
+
+            <p className="text-[#C6A15B] tracking-[0.5em] uppercase text-sm mb-8">
+              Expertise
+            </p>
+
+
+            <h2 className="text-5xl font-light">
+              Areas of Focus
+            </h2>
+
+
+          </div>
+
+
+
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+
+            {[
+              "Private Investments",
+              "Technology & Innovation",
+              "Real Estate",
+              "Healthcare",
+              "Infrastructure",
+              "Growth Companies"
+            ].map((item)=>(
+
+
+              <div
+                key={item}
+                className="border border-white/10 p-10 hover:border-[#C6A15B]/50 transition"
+              >
+
+                <h3 className="text-xl font-light">
+                  {item}
+                </h3>
+
+
+              </div>
+
+
+            ))}
+
+
+          </div>
+
+
+        </div>
+
+
+      </section>
+
+
+
+
+
+
+      {/* CONTACT CTA */}
+
+
+      <section className="py-40 px-6 bg-[#101214] text-center">
+
+
+        <h2 className="text-4xl md:text-6xl font-light mb-10">
+
           Partner with Bonsai Investments
+
         </h2>
 
 
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
+
+        <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
+
           Connecting capital, expertise and exceptional opportunities
           through strategic partnerships.
+
         </p>
+
 
 
         <button className="bg-[#C6A15B] text-black px-10 py-4 rounded-full">
           Contact Our Team
         </button>
+
 
 
       </section>
