@@ -6,14 +6,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex flex-col leading-none">
-          <span className="text-xl font-semibold tracking-[0.25em] text-white">
-            BONSAI
-          </span>
-          <span className="text-xs tracking-[0.35em] text-[#C6A15B]">
-            INVESTMENTS
-          </span>
-        </Link>
+       <Link href="/" className="flex items-center">
+  <img
+    src="/logo.svg"
+    alt="Bonsai Investments"
+    className="w-[180px]"
+  />
+</Link>
 
 
         {/* Menu Desktop */}
